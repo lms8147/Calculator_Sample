@@ -1,4 +1,4 @@
-package com.tutorial.development.calculator;
+package com.tutorial.development.calculator.model;
 
 public class Calculator {
 
