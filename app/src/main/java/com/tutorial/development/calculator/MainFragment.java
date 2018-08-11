@@ -18,7 +18,7 @@ public class MainFragment extends Fragment {
     private TextView mTextViewResult;
     private Calculator mCalculator;
 
-    public static MainFragment newInstance(){
+    public static MainFragment newInstance() {
         return new MainFragment();
     }
 
@@ -26,7 +26,7 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_main,container,false);
+        View root = inflater.inflate(R.layout.fragment_main, container, false);
 
         mCalculator = new Calculator();
 
@@ -41,9 +41,28 @@ public class MainFragment extends Fragment {
                 int a = Integer.parseInt(mEditTextOperandA.getText().toString());
                 int b = Integer.parseInt(mEditTextOperandB.getText().toString());
 
-                int result = mCalculator.operateAdd(a,b);
-                result += mCalculator.operateSub(a,b);
-                result += mCalculator.operateMul(a,b);
+                int result = mCalculator.operateAdd(a, b);
+                result += mCalculator.operateSub(a, b);
+                result += mCalculator.operateAdd(a, b);
+                result += mCalculator.operateSub(a, b);
+                result += mCalculator.operateAdd(a, b);
+                result += mCalculator.operateSub(a, b);
+                result += mCalculator.operateAdd(a, b);
+                result += mCalculator.operateSub(a, b);
+                result += mCalculator.operateAdd(a, b);
+                result += mCalculator.operateSub(a, b);
+                result += mCalculator.operateAdd(a, b);
+                result += mCalculator.operateSub(a, b);
+                result += mCalculator.operateAdd(a, b);
+                result += mCalculator.operateSub(a, b);
+                result += mCalculator.operateAdd(a, b);
+                result += mCalculator.operateSub(a, b);
+                result += mCalculator.operateAdd(a, b);
+                result += mCalculator.operateSub(a, b);
+                result += mCalculator.operateAdd(a, b);
+                result += mCalculator.operateSub(a, b);
+                result += mCalculator.operateAdd(a, b);
+                result += mCalculator.operateMul(a, b);
 
                 mTextViewResult.setText("" + result);
             }
