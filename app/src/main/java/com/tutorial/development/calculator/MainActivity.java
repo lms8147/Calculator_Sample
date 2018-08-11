@@ -11,11 +11,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private EditText mEditTextOperandA;
-    private EditText mEditTextOperandB;
-    private TextView mTextViewResult;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
