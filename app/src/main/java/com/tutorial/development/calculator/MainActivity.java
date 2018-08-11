@@ -1,5 +1,7 @@
 package com.tutorial.development.calculator;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,25 +21,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mEditTextOperandA = findViewById(R.id.edit_text_operand_a);
-        mEditTextOperandB = findViewById(R.id.edit_text_operand_b);
-        mTextViewResult = findViewById(R.id.text_view_result);
-        Button button = findViewById(R.id.button_caculate);
+        FragmentManager fm = getSupportFragmentManager();
+        Fragment fragment = fm.findFragmentById(R.id.fragment_container);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int a = Integer.parseInt(mEditTextOperandA.getText().toString());
-                int b = Integer.parseInt(mEditTextOperandB.getText().toString());
+        if (fragment == null) {
+            fragment = MainFragment.newInstance();
+            fm.beginTransaction()
+                    .add(R.id.fragment_container, fragment)
+                    .commit();
+        }
 
-                int result = operateAdd(a,b);
 
-                mTextViewResult.setText("" + result);
-            }
-        });
     }
 
-    public int operateAdd(int a, int b){
-        return a + b;
-    }
 }
