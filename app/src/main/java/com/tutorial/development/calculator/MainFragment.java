@@ -42,6 +42,8 @@ public class MainFragment extends Fragment {
                 int b = Integer.parseInt(mEditTextOperandB.getText().toString());
 
                 int result = mCalculator.operateAdd(a,b);
+                result += mCalculator.operateSub(a,b);
+                result += mCalculator.operateMul(a,b);
 
                 mTextViewResult.setText("" + result);
             }

@@ -6,4 +6,12 @@ public class Calculator {
         return a + b;
     }
 
+    public int operateSub(int a, int b){
+        return a - b;
+    }
+
+    public int operateMul(int a, int b){
+        return a * b;
+    }
+
 }
