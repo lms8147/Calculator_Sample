@@ -20,9 +20,28 @@ public class MainViewModel {
         int a = Integer.parseInt(operandA);
         int b = Integer.parseInt(operandB);
 
-        int result = mCalculator.operateAdd(a,b);
-        result += mCalculator.operateSub(a,b);
-        result += mCalculator.operateMul(a,b);
+        int result = mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateMul(a, b);
 
         this.result.set("" + result);
     }
