@@ -4,8 +4,8 @@ import com.tutorial.development.calculator.model.Calculator;
 
 public class MainPresenter implements MainContract.Presenter {
 
-    MainContract.View mView;
-    Calculator mCalculator;
+    private MainContract.View mView;
+    private Calculator mCalculator;
 
     public MainPresenter(MainContract.View view){
         setView(view);
@@ -19,9 +19,28 @@ public class MainPresenter implements MainContract.Presenter {
 
     @Override
     public void requestCalculate(int a, int b) {
-        int result = mCalculator.operateAdd(a,b);
-        result += mCalculator.operateSub(a,b);
-        result += mCalculator.operateMul(a,b);
+        int result = mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateSub(a, b);
+        result += mCalculator.operateAdd(a, b);
+        result += mCalculator.operateMul(a, b);
         mView.displayResult(result);
     }
 }
