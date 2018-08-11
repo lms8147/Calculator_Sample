@@ -14,10 +14,14 @@ public class MainActivity extends AppCompatActivity {
     private EditText mEditTextOperandB;
     private TextView mTextViewResult;
 
+    private Calculator mCalculator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mCalculator = new Calculator();
 
         mEditTextOperandA = findViewById(R.id.edit_text_operand_a);
         mEditTextOperandB = findViewById(R.id.edit_text_operand_b);
@@ -30,14 +34,12 @@ public class MainActivity extends AppCompatActivity {
                 int a = Integer.parseInt(mEditTextOperandA.getText().toString());
                 int b = Integer.parseInt(mEditTextOperandB.getText().toString());
 
-                int result = operateAdd(a,b);
+                int result = mCalculator.operateAdd(a,b);
 
                 mTextViewResult.setText("" + result);
             }
         });
     }
 
-    public int operateAdd(int a, int b){
-        return a + b;
-    }
+
 }
